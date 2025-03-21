@@ -1,1 +1,23 @@
-
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-data-pvc
+spec:
+  storageClassName: nfs-storage
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 10Gi
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mysql-data-pvc
+spec:
+  storageClassName: nfs-storage
+  accessModes:
+    - ReadWriteMany  # NFS 支持 ReadWriteMany 訪問模式
+  resources:
+    requests:
+      storage: 20Gi
