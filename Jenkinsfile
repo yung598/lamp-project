@@ -16,7 +16,7 @@ pipeline {
   stages {
     stage('拉取代碼') {
       steps {
-        git(url: 'https://github.com/youraccount/lamp-project.git', credentialsId: 'github-credential', branch: 'main')
+        git(url: 'https://github.com/yung598/lamp-project.git', credentialsId: 'github-credential', branch: 'main')
       }
     }
     
